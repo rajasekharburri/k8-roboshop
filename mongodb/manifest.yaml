@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nmongodb
+  name: mongodb
   # these are replica set labels
   labels:
     project: roboshop
@@ -27,4 +27,6 @@ spec:
       containers:
       - name: mongodb
         image: rajasekhar1616/rajapractice:v1
+
+
 ---
