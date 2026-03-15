@@ -20,7 +20,7 @@ spec:
     metadata:
       labels:
         # purpose: dp-demo
-        purpose: roboshop
+        project: roboshop
         component: mongodb
         tier: db
     spec:
