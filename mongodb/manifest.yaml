@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
+  namespace: roboshop
   # these are replica set labels
   labels:
     project: roboshop
@@ -19,14 +20,13 @@ spec:
   template:
     metadata:
       labels:
-        # purpose: dp-demo
         project: roboshop
         component: mongodb
         tier: db
     spec:
       containers:
       - name: mongodb
-        image: rajasekhar1616/rajapractice:v1
+        image: joindevops/mongodb:v1
         imagePullPolicy: Always
         readinessProbe:
           tcpSocket:
@@ -53,5 +53,3 @@ spec:
     - protocol: TCP
       port: 27017 # service port
       targetPort: 27017 # container port
-
----
