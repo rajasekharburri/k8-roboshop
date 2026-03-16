@@ -6,7 +6,7 @@ metadata:
   # these are replica set labels
   labels:
     project: roboshop
-    component: mongodb
+    component: catalogue
     tier: backend
 spec:
   replicas: 1
@@ -14,14 +14,14 @@ spec:
     # these labels are used to select pods
     matchLabels:
        project: roboshop
-       component: mongodb
+       component: catalogue
        tier: backend
   # pod definition
   template:
     metadata:
       labels:
          project: roboshop
-         component: mongodb
+         component: catalogue
          tier: backend
     spec:
       containers:
