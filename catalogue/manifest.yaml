@@ -42,6 +42,7 @@ spec:
            port: liveness-port
          failureThreshold: 1
          periodSeconds: 15
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -51,7 +52,7 @@ spec:
   selector:
     project: roboshop
     component: catalogue
-    tier: db
+    tier: backend
   ports:
     - protocol: TCP
       port: 8080 # service port
