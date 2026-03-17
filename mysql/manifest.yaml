@@ -38,6 +38,9 @@ spec:
       - name: mysql
         image: rajasekhar1616/mysql:v1
         imagePullPolicy: Always
+        env:
+        - name: MYSQL_ROOT_PASSWORD_FILE
+          value: /etc/mysql-secret/MYSQL_ROOT_PASSWORD
         # readinessProbe:
         #   tcpSocket:
         #     port: 3306
