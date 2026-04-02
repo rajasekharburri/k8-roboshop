@@ -45,7 +45,7 @@ kubens roboshop
 kubectl get pods
 kubectl get namespace
 
-mongodb
+    mongodb
 =======
 
 kubectl apply -f mongodb/manifeat.yaml
