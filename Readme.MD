@@ -18,6 +18,62 @@ RabbitMQ
 ⚙️ Prerequisites
 
 Make sure you have:
+# 🚀 Roboshop on Kubernetes (EKS)
+
+This project demonstrates deploying a **microservices-based Roboshop application** on **AWS EKS** using Kubernetes manifests.
+
+---
+
+## 📌 Architecture Overview
+
+- AWS EKS Cluster
+- Microservices:
+  - Catalogue
+  - User
+  - Cart
+  - Shipping
+  - Payment
+- Databases:
+  - MongoDB
+  - MySQL
+  - Redis
+  - RabbitMQ
+
+---
+
+## ⚙️ Prerequisites
+
+Make sure you have:
+
+- AWS Account
+- EC2 Instance (Amazon Linux / RHEL)
+- IAM permissions for EKS
+- Installed tools:
+  - Docker
+  - kubectl
+  - eksctl
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1️⃣ Install Docker
+
+```bash
+#!/bin/bash
+growpart /dev/nvme0n1 4
+lvextend -L +30G /dev/mapper/RootVG-varVol
+xfs_growfs /var
+
+dnf -y install dnf-plugins-core
+dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+
+dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+systemctl start docker
+systemctl enable docker
+usermod -aG docker ec2-user
+
 
 AWS Account
 EC2 Instance (Amazon Linux / RHEL)
